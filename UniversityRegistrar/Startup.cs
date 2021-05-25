@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ReplaceWithNameSpace.Models; //Replace with namespace
+using UniversityRegistrar.Models;
 
 namespace ReplaceWithProjectName
 {
@@ -25,7 +25,7 @@ namespace ReplaceWithProjectName
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<REPLACEWITHProjectNameContext>(options => options
+        .AddDbContext<UniversityRegistrarContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
 
