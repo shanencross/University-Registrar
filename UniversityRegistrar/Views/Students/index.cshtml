@@ -15,7 +15,7 @@
 <ul>
 @foreach (Student student in Model)
 {
-  <li>@Html.ActionLink($"{student.Name}", "Details", new { id = student.StudentId }) | Enrolled @student.DateOfEnrollment</li>
+  <li>@Html.ActionLink($"{student.Name}", "Details", new { id = student.StudentId }) | Enrolled @student.DateOfEnrollment.ToShortDateString()</li>
 }
 </ul>
 

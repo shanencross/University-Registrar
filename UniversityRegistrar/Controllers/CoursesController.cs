@@ -27,7 +27,7 @@ namespace UniversityRegistrar.Controllers
       }
 
       [HttpPost]
-      public ActionResult Create(Course course, int studentId)
+      public ActionResult Create(Course course)
       {
         _db.Courses.Add(course);
         _db.SaveChanges();
