@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UniversityRegistrar.Models;
 
 namespace UniversityRegistrar.Controllers 
@@ -29,8 +30,11 @@ namespace UniversityRegistrar.Controllers
       [HttpPost]
       public ActionResult Create(Course course)
       {
-        _db.Courses.Add(course);
-        _db.SaveChanges();
+        if (String.IsNullOrWhiteSpace(course.Name) == false && String.IsNullOrWhiteSpace(course.CourseNumber) == false)
+        {
+          _db.Courses.Add(course);
+          _db.SaveChanges();
+        }
         return RedirectToAction("Index");
       }
       
