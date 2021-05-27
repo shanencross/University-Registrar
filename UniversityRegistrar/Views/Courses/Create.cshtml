@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Course;
+
+<h1>Add Course</h1>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name);
+  @Html.TextBoxFor(model => model.Name);
+
+  @Html.LabelFor(model => model.CourseNumber);
+  @Html.TextBoxFor(model => model.CourseNumber);
+
+  <input type="submit" value="Add course" />
+}
+
+<p>@Html.ActionLink("Back to courses", "Index")</p>
+<p>@Html.ActionLink("Back to home", "Index", "Home")</p>

@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using UniversityRegistrar.Models;
 
-namespace ReplaceWithProjectName
+namespace UniversityRegistrar
 {
   public class Startup
   {
