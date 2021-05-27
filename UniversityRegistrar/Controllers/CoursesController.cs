@@ -31,11 +31,6 @@ namespace UniversityRegistrar.Controllers
       {
         _db.Courses.Add(course);
         _db.SaveChanges();
-        if (studentId != 0)
-        {
-          _db.CourseStudents.Add(new CourseStudent() { StudentId=studentId, CourseId=course.CourseId });
-        }
-        _db.SaveChanges();
         return RedirectToAction("Index");
       }
       

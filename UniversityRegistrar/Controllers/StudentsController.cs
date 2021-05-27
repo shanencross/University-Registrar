@@ -23,19 +23,13 @@ namespace UniversityRegistrar.Controllers
 
       public ActionResult Create()
       {
-        ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
         return View();
       }
 
       [HttpPost]
-      public ActionResult Create(Student student, int courseId)
+      public ActionResult Create(Student student)
       {
         _db.Students.Add(student);
-        _db.SaveChanges();
-        if (courseId != 0)
-        {
-          _db.CourseStudents.Add(new CourseStudent() { StudentId=student.StudentId, CourseId=courseId });
-        }
         _db.SaveChanges();
         return RedirectToAction("Index");
       }
