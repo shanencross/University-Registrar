@@ -19,6 +19,6 @@
 }
 </ul>
 
-<p>@Html.ActionLink("Enroll in course", "AddCourse")</p>
+<p>@Html.ActionLink("Enroll in course", "AddCourse", new { id = Model.StudentId })</p>
 <p>@Html.ActionLink("Back to students", "Index")</p>
 <p>@Html.ActionLink("Back to home", "Index", "Home")</p>
