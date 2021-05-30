@@ -15,3 +15,7 @@
     <li>@Html.ActionLink(join.Student.Name, "Details", "Students", new { id = join.Student.StudentId})</li>
   }
 </ul>
+
+<p>@Html.ActionLink("Enroll student", "AddStudent", new { id = Model.CourseId })</p>
+<p>@Html.ActionLink("Back to courses", "Index")</p>
+<p>@Html.ActionLink("Back to home", "Index", "Home")</p>
