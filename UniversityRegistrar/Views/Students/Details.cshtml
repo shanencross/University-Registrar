@@ -15,7 +15,7 @@
 <ul>
 @foreach (CourseStudent join in Model.JoinEntities)
 {
-  <li>@join.Course.CourseNumber: @join.Course.Name</li>
+  <li>@Html.ActionLink($"{join.Course.CourseNumber}: {join.Course.Name}", "Details", "Courses", new { id = join.Course.CourseId })</li>
 }
 </ul>
 
